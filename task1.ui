@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>846</width>
+    <height>718</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="resume">
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Resume</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons8-play-button-circled-96.png</normaloff>icons8-play-button-circled-96.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pause">
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Pause</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons8-pause-squared-96.png</normaloff>icons8-pause-squared-96.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clear">
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons8-erase-128xxx.png</normaloff>icons8-erase-128xxx.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_ch1">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>hide channel 1</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="PlotWidget" name="graphicsView"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_ch2">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>hide channel 2</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="PlotWidget" name="graphicsView_2"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_cch3">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>hide channel 3</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="PlotWidget" name="graphicsView_3"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_ch4">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>hide channel 4</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="PlotWidget" name="graphicsView_4"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_ch5">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>hide channel 5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="PlotWidget" name="graphicsView_5"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>                                                                                   To zoom drag the graph to the right</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>846</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuchannel_1">
+    <property name="title">
+     <string>channel 1</string>
+    </property>
+    <addaction name="open_ch1"/>
+   </widget>
+   <widget class="QMenu" name="menuchannel_2">
+    <property name="title">
+     <string>channel 2</string>
+    </property>
+    <addaction name="open_ch2"/>
+   </widget>
+   <widget class="QMenu" name="menuchannel_3">
+    <property name="title">
+     <string>channel 3</string>
+    </property>
+    <addaction name="open_ch3"/>
+   </widget>
+   <widget class="QMenu" name="menuchannel_4">
+    <property name="title">
+     <string>channel 4</string>
+    </property>
+    <addaction name="open_ch4"/>
+   </widget>
+   <widget class="QMenu" name="menuchannel_5">
+    <property name="title">
+     <string>channel 5</string>
+    </property>
+    <addaction name="open_ch5"/>
+   </widget>
+   <widget class="QMenu" name="menunnnn">
+    <property name="title">
+     <string>nnnn</string>
+    </property>
+    <addaction name="actionopen"/>
+   </widget>
+   <addaction name="menuchannel_1"/>
+   <addaction name="menuchannel_2"/>
+   <addaction name="menuchannel_3"/>
+   <addaction name="menuchannel_4"/>
+   <addaction name="menuchannel_5"/>
+   <addaction name="menunnnn"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_ch1">
+   <property name="text">
+    <string>open with</string>
+   </property>
+  </action>
+  <action name="open_ch2">
+   <property name="text">
+    <string>open with</string>
+   </property>
+  </action>
+  <action name="open_ch3">
+   <property name="text">
+    <string>open with</string>
+   </property>
+  </action>
+  <action name="open_ch4">
+   <property name="text">
+    <string>open with</string>
+   </property>
+  </action>
+  <action name="open_ch5">
+   <property name="text">
+    <string>open with</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
