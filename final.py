@@ -5,7 +5,8 @@ from pyqtgraph import PlotWidget ,PlotItem
 import pyqtgraph as pg 
 import os 
 import pathlib
-class Ui_MainWindow(QtGui.QMainWindow):
+from PyQt5.QtWidgets import QMainWindow , QFileDialog
+class Ui_MainWindow(QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(846, 718)
@@ -257,7 +258,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
          
 
     def read_file1(self) :
-        self.fname1 = QtGui.QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
+        self.fname1 = QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
         path = self.fname1[0]
         #self.name1= self.fname1
 
@@ -282,7 +283,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
         
     def read_file2(self) :
-        fname = QtGui.QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
+        fname = QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
         path = fname[0]
 
         if pathlib.Path(path).suffix == ".txt" :
@@ -304,7 +305,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.x2= list(self.x2[:])
             self.y2= list(self.y2[:])
     def read_file3(self) :
-        fname = QtGui.QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
+        fname = QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
         path = fname[0]
 
         if pathlib.Path(path).suffix == ".txt" :
@@ -327,7 +328,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.y3= list(self.y3[:])
 
     def read_file4(self) :
-        fname = QtGui.QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
+        fname = QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
         path = fname[0]
 
         if pathlib.Path(path).suffix == ".txt" :
@@ -350,7 +351,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.y4= list(self.y4[:])
 
     def read_file5(self) :
-        fname = QtGui.QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
+        fname = QFileDialog.getOpenFileName( self, 'Open only txt or CSV or xls', os.getenv('HOME') ,"csv(*.csv);; text(*.txt) ;; xls(*.xls)" )
         path = fname[0]
 
         if pathlib.Path(path).suffix == ".txt" :
